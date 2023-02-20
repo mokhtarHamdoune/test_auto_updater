@@ -4,9 +4,23 @@
   "main": "main.js",
   "license": "MIT",
   "scripts": {
-    "start": "electron ."
+    "publish": "electron-builder  --win -p always"
+  },
+  "build": {
+    "productName": "Electron Auto Update",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "mokhtarHamdoune",
+        "repo": "test_auto_updater"
+      }
+    ]
   },
   "devDependencies": {
-    "electron": "^23.1.0"
+    "electron": "^23.1.0",
+    "electron-builder": "^23.6.0"
+  },
+  "dependencies": {
+    "electron-updater": "^5.3.0"
   }
 }
